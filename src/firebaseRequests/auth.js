@@ -9,4 +9,8 @@ const loginSomebody = (somebody) => {
   return firebase.auth().signInWithEmailAndPassword(somebody.email, somebody.password);
 };
 
-export default {registerSomebody, loginSomebody};
+const logoutSomebody = () => {
+  return firebase.auth().signOut();
+};
+
+export default {registerSomebody, loginSomebody, logoutSomebody};
